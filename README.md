@@ -10,4 +10,4 @@ systemctl restart zabbix-agent2 #(zabbix-agentd - if you use zabbix-agent) <Br>
 Check that zabbix-agent gets metrics by commands: <Br>
 zabbix_agent2 -t nginx.discovery #(zabbix_agentd.d - if you use zabbix-agent) <Br>
 zabbix_agent2 -t nginx.stat[zone name or nodeIP]  #(zabbix_agentd.d - if you use zabbix-agent) <Br>
-In zabbix web interface, in Data Collection - Templates, import nginx_vts.xml <Br>
+In zabbix web interface, in Data Collection - Templates, import nginx_vts.xml <Br> 
