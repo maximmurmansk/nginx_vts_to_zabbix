@@ -15,3 +15,5 @@
 `zabbix_agent2 -t nginx.stat[zone name or nodeIP]`  #(zabbix_agentd - if you use zabbix-agent) <Br>
 `zabbix_agent2 -t nginx.host[host name]`  #(zabbix_agentd - if you use zabbix-agent) <Br>
 8. In zabbix web interface, in Data Collection - Templates, import nginx_vts.xml <Br> 
+
+Almost all metrics are in the format like constantly increasing value, but you can change like number of units per minute
