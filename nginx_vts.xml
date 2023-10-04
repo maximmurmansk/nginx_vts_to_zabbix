@@ -27,6 +27,77 @@
                     <lifetime>0</lifetime>
                     <item_prototypes>
                         <item_prototype>
+                            <uuid>2c397f8e248a4372b19af60bbe06cd68</uuid>
+                            <name>{#HOST_NAME} Active connections</name>
+                            <type>DEPENDENT</type>
+                            <key>nginx.host.[{#HOST_NAME}.connections.active]</key>
+                            <delay>0</delay>
+                            <history>10d</history>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <parameters>
+                                        <parameter>$.connections.active</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nginx.host[{#HOST_NAME}]</key>
+                            </master_item>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Nginx</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>d7aa5c7dec2940f7930823517868370c</uuid>
+                            <name>{#HOST_NAME} Requests per min</name>
+                            <type>DEPENDENT</type>
+                            <key>nginx.host.[{#HOST_NAME}.connections.requests]</key>
+                            <delay>0</delay>
+                            <history>10d</history>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <parameters>
+                                        <parameter>$.connections.requests</parameter>
+                                    </parameters>
+                                </step>
+                                <step>
+                                    <type>SIMPLE_CHANGE</type>
+                                    <parameters>
+                                        <parameter/>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nginx.host[{#HOST_NAME}]</key>
+                            </master_item>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Nginx</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>f05cc52212b549fa8fd53854848629fe</uuid>
+                            <name>{#HOST_NAME} nginx.host</name>
+                            <key>nginx.host[{#HOST_NAME}]</key>
+                            <delay>60</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>Nginx</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
                             <uuid>d5d1d7356e134073990d8ec3dd13be3a</uuid>
                             <name>{#UPSTREAM} BytesIn</name>
                             <type>DEPENDENT</type>
