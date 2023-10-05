@@ -1,5 +1,5 @@
 # nginx_vts_to_zabbix
-1. Check your Nginx VTS by `curl:your_nginx_vts_url` #(my_nginx_vts_url `http://localhost/statuszone/format/json`) <Br>
+1. Check your Nginx VTS by `curl:your_nginx_vts_url` #(my_nginx_vts_url: `http://localhost/statuszone/format/json`) <Br>
 2. `python3 -m pip install requests` #(Python library) 
 3. Add 3 files from /scripts/ to /etc/zabbix/scripts
 4. In /etc/zabbix/zabbix_agent2.d/ create file userparameter_nginx_vts.conf #(/zabbix_agentd.d/ - if you use zabbix-agent)
