@@ -17,3 +17,4 @@
 8. In zabbix web interface, in Data Collection - Templates, import nginx_vts.xml <Br> 
 
 Almost all metrics are in the format like constantly increasing value, but you can change like number of units per minute
+as i made with `{#HOST_NAME} nginx.host: {#HOST_NAME} Requests per min` in Item prototypes
